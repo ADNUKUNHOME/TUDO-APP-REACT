@@ -85,3 +85,14 @@
     font-style: normal;
     color: grey;
   }
+
+  .app .checked h1{
+    align-self: right;
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgb(238, 233, 233),
+                0 0 5px rgb(238, 233, 233);
+    text-align: center;
+    width: 330px;
+    border-radius: 6px;
+    color: rgb(43, 240, 43);
+  }
