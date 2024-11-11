@@ -6,6 +6,10 @@ function App() {
   const [toDos, setToDos] = useState([]);
   const [toDo, setToDo] = useState('');
 
+  const deleteTodo = (id) => {
+    setToDos(toDos.filter(todo => todo.id !== id));
+  };
+
   return (
     <div className="app">
     <div className="mainHeading">
@@ -39,7 +43,7 @@ function App() {
           <p>{obj.Text}</p>
         </div>
         <div className="right">
-          <i className="fas fa-times"></i>
+          <i className="fas fa-times" onClick={() => {deleteTodo(obj.id)}}></i>
         </div>
       </div>
         )
@@ -48,7 +52,6 @@ function App() {
       {toDos.map((obj) => {
         
         if(obj.status) {
-          <h2>READ LIST</h2>
           return(<h1>{obj.Text}</h1>);
         }
         return null
